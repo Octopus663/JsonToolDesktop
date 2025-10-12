@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.jsontooldesktop.MainController"
+      alignment="CENTER" spacing="20.0">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <TableView fx:id="documentsTable" prefHeight="400.0" prefWidth="600.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID"/>
+            <TableColumn fx:id="nameColumn" prefWidth="250.0" text="Назва документа"/>
+            <TableColumn fx:id="modifiedAtColumn" prefWidth="250.0" text="Остання зміна"/>
+        </columns>
+    </TableView>
+
+    <HBox alignment="CENTER" spacing="10.0">
+        <Button fx:id="createButton" text="Створити новий" onAction="#handleCreateButton"/>
+        <Button fx:id="editButton" text="Редагувати"/>
+        <Button fx:id="deleteButton" text="Видалити"/>
+    </HBox>
+
+</VBox>
